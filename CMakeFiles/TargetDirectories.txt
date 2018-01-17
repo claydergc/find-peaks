@@ -1,3 +1,0 @@
-/home/claydergc/GitHub Projects/find-peaks/CMakeFiles/rebuild_cache.dir
-/home/claydergc/GitHub Projects/find-peaks/CMakeFiles/edit_cache.dir
-/home/claydergc/GitHub Projects/find-peaks/CMakeFiles/example.dir
