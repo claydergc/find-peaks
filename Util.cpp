@@ -147,7 +147,6 @@ void findPeaks(vector<float> x0, vector<int>& peakInds)
             	foundPeak = false;
             }
         
-
         	//Found new peak that was lager than temp mag and selectivity larger
         	//than the minimum to its left.
         
@@ -156,8 +155,6 @@ void findPeaks(vector<float> x0, vector<int>& peakInds)
             	tempLoc = ii-1;
             	tempMag = x[ii-1];
         	}
-
-
 
         	//Make sure we don't iterate past the length of our vector
         	if(ii == len)
@@ -192,24 +189,6 @@ void findPeaks(vector<float> x0, vector<int>& peakInds)
             peakMag[cInd-1] = tempMag;
             cInd = cInd + 1;
         }
-        
-
-        /*if(!foundPeak)
-        {
-        	cout<<"hey clay!!!"<<endl;
-        	if ( x[x.size()-1] > tempMag && x[x.size()-1] > leftMin + sel )
-        	{
-            	peakLoc[cInd] = len;
-            	peakMag[cInd] = x[x.size()-1];
-            	cInd = cInd + 1;
-            }
-        	else if( tempMag > min(x0[x0.size()-1], x[x.size()-1]) + sel )
-        	{
-            	peakLoc[cInd] = tempLoc;
-            	peakMag[cInd] = tempMag;
-            	cInd = cInd + 1;
-            }
-    	}*/
 
     	//Create output
     	if( cInd > 0 )

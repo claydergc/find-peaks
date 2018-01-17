@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/claydergc/GitHub Projects/find-peaks/Util.cpp
+Util.h
+/home/claydergc/GitHub Projects/find-peaks/Util.h
+
+/home/claydergc/GitHub Projects/find-peaks/Util.h
+iostream
+-
+vector
+-
+algorithm
+-
+cmath
+-
+
+/home/claydergc/GitHub Projects/find-peaks/example.cpp
+iostream
+-
+Util.h
+/home/claydergc/GitHub Projects/find-peaks/Util.h
+
