@@ -7,10 +7,11 @@
 #include <algorithm>
 #include <cmath>
 
-#define EPS 2.2204e-16
-
 using namespace std;
 
-void findPeaks(vector<float> x0, vector<int>& peakInds);
+namespace Peaks {
+    const float EPS = 2.2204e-16f;
+    void findPeaks(vector<float> x0, vector<int>& peakInds);
+}
 
 #endif

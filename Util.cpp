@@ -53,7 +53,7 @@ void signVector(vector<float> in, vector<int>& out)
 }
 
 
-void findPeaks(vector<float> x0, vector<int>& peakInds)
+void Peaks::findPeaks(vector<float> x0, vector<int>& peakInds)
 {
 	int minIdx = distance(x0.begin(), min_element(x0.begin(), x0.end()));
 	int maxIdx = distance(x0.begin(), max_element(x0.begin(), x0.end()));
@@ -64,7 +64,7 @@ void findPeaks(vector<float> x0, vector<int>& peakInds)
 
 	vector<float> dx;
 	diff(x0, dx);
-	replace(dx.begin(), dx.end(), 0.0, -EPS);
+	replace(dx.begin(), dx.end(), 0.0f, -Peaks::EPS);
 	vector<float> dx0(dx.begin(), dx.end()-1);
 	vector<float> dx1(dx.begin()+1, dx.end());
 	vector<float> dx2;

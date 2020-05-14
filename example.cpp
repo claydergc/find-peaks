@@ -9,7 +9,7 @@ int main()
 	vector<float> in(signal, signal + sizeof(signal) / sizeof(float));
 	vector<int> out;
 
-	findPeaks(in, out);
+    Peaks::findPeaks(in, out);
 
 	cout<<"Maxima found:"<<endl;
 
