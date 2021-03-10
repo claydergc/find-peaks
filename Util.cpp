@@ -83,7 +83,7 @@ void Peaks::findPeaks(vector<float> x0, vector<int>& peakInds)
 
 
 	ind.insert(ind.begin(), 0);
-	ind.insert(ind.end(), len0);
+	ind.insert(ind.end(), len0 - 1);
 
 	int minMagIdx = distance(x.begin(), min_element(x.begin(), x.end()));
 	float minMag = x[minMagIdx];
