@@ -4,6 +4,6 @@ project(find-peaks)
 
 include_directories(.)
 
-add_executable (example example.cpp Util.cpp)
+add_executable (example example.cpp PeakFinder.cpp)
 target_link_libraries (example)
 

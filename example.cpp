@@ -1,20 +1,28 @@
 #include <iostream>
-#include "Util.h"
-
-using namespace std;
+#include "PeakFinder.h"
 
 int main()
 {
-	float signal[14] = {0,1,1,1,1,1,1,5,1,1,1,1,7,1};
-	vector<float> in(signal, signal + sizeof(signal) / sizeof(float));
-	vector<int> out;
+	//float inArr[14] = {0,1,1,1,1,1,1,5,1,1,1,1,7};
+	float inArr[4] =  { 1, 0, 0, 1 };
 
-    Peaks::findPeaks(in, out);
+	std::vector<float> in(inArr, inArr + sizeof(inArr) / sizeof(float));
+	std::vector<int> out;
 
-	cout<<"Maxima found:"<<endl;
+    PeakFinder::findPeaks(in, out, false);
+
+	if(out.size()==0)
+	{
+		std::cout<<"No peaks"<<std::endl;
+		return 0;
+	}
+
+	std::cout<<"Maxima found:"<<std::endl;
 
 	for(int i=0; i<out.size(); ++i)
-		cout<<in[out[i]]<<" ";
+		std::cout<<in[out[i]]<<" ";
 
-	cout<<endl;
+	std::cout<<std::endl;
+
+	return 0;
 }
