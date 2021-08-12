@@ -3,7 +3,7 @@
 
 int main()
 {
-	//float inArr[14] = {0,1,1,1,1,1,1,5,1,1,1,1,7};
+	//float inArr[14] = {0,1,1,1,1,1,1,5,1,1,1,1,1,7};
 	float inArr[4] =  { 1, 0, 0, 1 };
 
 	std::vector<float> in(inArr, inArr + sizeof(inArr) / sizeof(float));
