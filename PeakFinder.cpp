@@ -70,7 +70,7 @@ void PeakFinder::findPeaks(std::vector<float> x0, std::vector<int>& peakInds, bo
 	int maxIdx = distance(x0.begin(), max_element(x0.begin(), x0.end()));
 
 	float sel = (x0[maxIdx]-x0[minIdx])/4.0;
-	int len0 = x0.size();
+	int endIdx = x0.size()-1;
 
 	scalarProduct(extrema, x0, x0);
 
@@ -96,9 +96,9 @@ void PeakFinder::findPeaks(std::vector<float> x0, std::vector<int>& peakInds, bo
 		selectElementsFromIndices(x0, ind, x);		
 		x.insert(x.begin(), x0[0]);
 		x.insert(x.end(), x0[x0.size()-1]);
-		//ind = [1;ind;len0];
+		//ind = [1;ind;endIdx];
 		ind.insert(ind.begin(), 1);
-		ind.insert(ind.end(), len0);
+		ind.insert(ind.end(), endIdx);
 		minMagIdx = distance(x.begin(), std::min_element(x.begin(), x.end()));
 		minMag = x[minMagIdx];		
 		//std::cout<<"Hola"<<std::endl;
